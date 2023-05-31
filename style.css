@@ -1,0 +1,487 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}/*nuevo*/
+
+body{
+    width: 100%;/*nuevo*/
+    height: 100vh;/*nuevo*/
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Nova Mono', monospace;
+}
+
+.titulo .logo{
+    position: absolute;
+    top: 40px;
+    left: 41px;
+    gap: 40px;
+}
+
+.escribiendo{
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    gap: 40px;
+    font-size: 30px;
+}
+
+
+h1 {
+    border-right: 2.5px solid black;
+    animation: cursor .8s infinite, escribiendo 3.5s steps(20, end);
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*.redes {
+    width: 10%;
+    height: 100%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}*/
+.redes.mexico {
+    width: 75%;
+    height: 75%;
+    filter: contrast(180%);
+}
+@keyframes cursor {
+    0% {border-color: transparent;}
+    50%{ border-color: black;}
+}
+
+@keyframes escribiendo {
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+.ingreso {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 42%;
+    height: 60%;
+}
+
+.swal-modal{
+    background-color: rgb(78, 76, 76);
+}
+
+.swal-button{
+    background-color: rgb(78, 76, 76);
+    border-color: rgb(19, 19, 19) !important; 
+}
+
+.swal-button:active {
+    background-color: rgb(2, 2, 2) !important;
+}
+.swal-button:hover {
+    background-color: rgb(60, 60, 60) !important;
+}
+
+.ingreso label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ingreso textarea {
+    display: block;
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.alert{
+    width: 100%;
+    display: inline;
+    flex-direction: row;
+}
+.alert img{
+    width: 4%;
+    border-radius: 100%;
+}
+
+.alert p{
+    display: inline;
+    margin-left: 2%;
+
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 5%;
+    top: 95%;
+
+}
+
+.encriptar {
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 2%;
+    gap: 8px;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.encriptar:active{
+    background: rgb(175, 175, 175);
+}
+
+.desencriptar{
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 2%;
+    gap: 8px;
+    margin-left: 10px;
+    color: black;
+    text-align: center;
+    background: rgb(175, 175, 175);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.desencriptar:active{
+    background: rgb(70, 70, 70);
+}
+
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%; /*30%*/
+    height: 78%; /*88%*/
+    left: 65%; /*65%*/
+    background: rgb(190, 190, 190);
+    position: absolute; /*absolute*/
+    top: 5%; /*5%*/
+    border-radius: 32px; /*32px*/
+    box-shadow: 5px 5px 10px rgb(34, 34, 34); /*5px 5px 10px rgb(34, 34, 34)*/
+    margin-top: 60px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+
+.munieco {
+    position: absolute;
+    display: flex;
+    width: 80%;
+    height: 50%;
+    top: 12%;
+}
+
+
+.resultado .titulo-mensaje {
+    position: absolute;
+    width: 80%;
+    top: 65%;
+    display:inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 1%;
+    gap: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.resultado p{
+    position: absolute;
+    width: 80%;
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    text-align: center;
+}
+.resultado .mensajeEncriptado{
+    position: absolute;
+    width: 80%;
+    top: 15%;
+    display: none;
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.copiar{    
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 2%;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+    display: none;
+}
+
+.copiar:active{
+    background: rgb(175, 175, 175);
+}
+
+.limpiar{
+    position: absolute;
+    left: 25%;
+    top: 90%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 2%;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+    display: none;
+}
+
+.limpiar:active{
+    background: rgb(175, 175, 175);
+}
+
+footer {
+    position: absolute;
+    background: linear-gradient(#c3c0c0,#3d3b3b);
+    width: 100%;
+    height: 100px;
+    top: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer a{
+    width: 80%;
+    margin-left: 20%;
+}
+
+.redesb {
+    width: 10%;
+    height: 100%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.red1{
+    width: 55%;
+    left: 75%;
+    margin-left: 50%;
+    border-radius: 30%;
+    filter: contrast(180%);
+
+}
+
+.p1{
+    font-family: 'Inter';
+    position: absolute;
+    left: 600px;
+    color: black;
+    font-size: 16px;
+}
+
+/*.red2 {
+    width: 45%;
+    height: 75%;
+    filter: contrast(180%);
+
+}*/
+
+/*
+.linkedin {
+    width: 50px;
+    border-radius: 30%;
+    box-shadow: 5px 5px 10px rgb(34, 34, 34);
+}
+
+.github {
+    width: 50px;
+    border-radius: 30%;
+    box-shadow: 5px 5px 10px rgb(34, 34, 34);
+}
+
+.logoLC{
+    width: 150px;
+    box-shadow: 5px 5px 10px rgb(34, 34, 34);
+}*/
+
+/* Diseño Responsivo*/
+
+@media (max-width: 57.5em) {
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .titulo .logo{
+        width: 20%;
+        top: 5px;
+        left: 5px;
+    }
+
+    .escribiendo{
+        width: 90%;/*width: 93%;*/
+        top: 50px;
+        left: 5%;/*left: 5%;*/
+        font-size: 21px;
+    }
+
+    .ingreso {
+        width: 80%;
+        height: 60%;
+        left: 5%;
+        top: 15%;
+    }
+
+    .ingreso textarea{
+        width: 80%;
+        height: 45%;
+        margin-top: 15px;
+    }
+
+    .alert p{
+        font-size: 12px;
+    }
+
+    .botones{
+        width: 80%;
+        left: 5%;
+        top: 70%;
+    }
+
+    .encriptar, .desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .resultado{
+        width: 80%;
+        height: 30%;/*height: 30%;*/
+        left: 5%;/*left: 10%;*/
+        top: 60%;/*top: 65%;*/
+    }
+
+    .munieco{
+        display: none;
+    }
+
+    .resultado .titulo-mensaje{
+        top: 6%;
+    }
+
+    .resultado p{
+        top: 50%;
+    }
+
+    .resultado .mensajeEncriptado{
+        width: 60%;
+        height: 40%;
+        top: 5%;
+    }
+
+    .copiar{
+        top: 60%;/*top: 70%;*/
+    }
+
+    .limpiar{
+        top: 78%;/*top: 85%;*/
+    }
+
+    footer{
+        height: 60px;
+        top: 99%;
+    }
+
+    footer a{
+        margin-left: 0%;/*margin-left: 0;*/
+    }
+
+    .redesb.red1{
+        width: 30px;
+        margin-left: 20%;
+    }
+
+    .redesb.red2{
+        width: 30px;
+        margin-left: 30%;
+    }
+
+    .p1{
+        width: 900px;/*width: 180px;*/
+        font-family: 'Inter';
+        font-style: normal;
+        color: whitesmoke;/*#808184;*/
+        font-size: 16px;
+        position: absolute;
+        top: 20px;/*1314px;*/
+        left: 30px;   
+        padding: 0px 50px 10px 50px;/*padding: 0 0 7px;*/
+    }
+/*
+    .linkedin{
+        width: 30px;
+        margin-left: 20%;
+    }
+
+    .github{
+        width: 30px;
+        margin-left: 30%;
+    }
+
+    .logoLC{
+        width: 100px;
+    }
+*/
+}

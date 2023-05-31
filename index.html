@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Elaborado por Luis Valdos</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/logoNegro.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nova+Mono&display=swap"
+        rel="stylesheet">
+        <script src="
+        https://unpkg.com/sweetalert/dist/sweetalert.min.js
+        "></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="titulo">
+                <img class="logo" src="./imagenes/Logo.png" alt="Logo Alura">
+                <div class="escribiendo">
+                    <h1>Encriptador de texto de Luis Valdos Abndz</h1>
+                </div>
+                <div class="redes">
+                    <a href="" target="_blank"><img class="mexico" src="./imagenes/icons8-méjico-48.png" alt="red"></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="ingreso">
+                <label for="mensaje">Ingrese su texto aquí:</label>
+                <textarea name="" id="mensaje" cols="50" rows="10" style="border: none;" autofocus pattern="[a-z ]*"
+                    oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')" required placeholder="Aquí ingrese el texto"></textarea>
+                <div class="alert"><img src="./imagenes/alertIcon.png" class="icon" alt="alert-icon"><p id="alert">letras minúsculas y sin acentos</p></div>
+                <div class="botones">
+                    <input type="button" value="Encriptar" class="encriptar" onclick="encriptar()">
+                    <input type="button" value="Desencriptar" class="desencriptar" onclick="desencriptar()">
+                </div>
+            </div>
+            <div class="resultado" id="resultado">
+                <img class="munieco" src="./imagenes/Muñeco.png" alt="" id="munieco">
+                <h2 class="titulo-mensaje" id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingrese el texto que desee encriptar o desencriptar.</p>
+                <textarea name="" class="mensajeEncriptado" id="mensajeEncriptado" cols="20" rows="10"
+                    style="border: none;"></textarea>
+                <button class="copiar" id="copy" onclick="copiarTexto()">Copiar Mensaje</button>
+                <button class="limpiar" id="limpiar" onclick="limpiar()">Borrar Mensaje</button>
+            </div>
+        </main>
+        <footer>
+            <div class="redesb">
+                <a href="https://www.linkedin.com/in/luis-valdos-abundez-571ab826b/" target="_blank"><img class="redl" src="./imagenes/icons8-linkedin-logo-32.png"" alt="red2"></a>
+
+                <a href="https://github.com/val-arch" target="_blank"><img class="red1" src="./imagenes/icons8-github-glyph-neue-32.png" alt="redg"></a>
+                <h2 class="p1">Licenciado en Desarrollo de Software: luisvaldosabundez@gmail.com</h2>
+            </div>
+            
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
